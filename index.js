@@ -286,7 +286,21 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-function vowelCounter(string) {}
+const vowels = ["a", "e", "i", "o", "u"];
+
+function vowelCounter(string) {
+  let count = 0;
+  for (let letter of string.toLowerCase()) {
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  }
+
+  // return number of vowels
+  return count;
+}
+
+console.log("stretch: ", vowelCounter("hello"));
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
